@@ -1,0 +1,25 @@
+#! /usr/bin/env bash
+
+# This is a sandboxed version of the 
+# Vencord installed designed to only 
+# access the user installation of the
+# Discord Flatpak. Modify to your needs.
+
+bwrap \
+  --unshare-all \
+  --share-net \
+  --new-session \
+  --symlink /usr/lib /lib \
+  --symlink /usr/lib64 /lib64 \
+  --symlink /usr/bin /bin \
+  --symlink /usr/bin /sbin \
+  --ro-bind /usr/lib /usr/lib \
+  --ro-bind /usr/lib64 /usr/lib64 \
+  --ro-bind /usr/bin /usr/bin \
+  --ro-bind /etc /etc \
+  --ro-bind /usr/share /usr/share \
+  --dev /dev \
+  --proc /proc \
+  --ro-bind "$HOME/Documents/glance" "glance" \
+  -- \
+  ./glance/glance --config glance/glance.yml
