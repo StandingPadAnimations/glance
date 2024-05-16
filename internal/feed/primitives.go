@@ -20,6 +20,24 @@ type ForumPost struct {
 
 type ForumPosts []ForumPost
 
+type FeedBinPost struct {
+	Title           string
+	Feed		string
+	FeedId		int
+	TargetUrl       string
+	TimePosted      time.Time
+}
+
+type FeedBinPosts []FeedBinPost
+
+type FeedBinFeed struct {
+	Posts		FeedBinPosts
+	FeedId		int
+	FeedName	string
+}
+
+type FeedBinFeeds []FeedBinFeed
+
 type Calendar struct {
 	CurrentDay        int
 	CurrentWeekNumber int

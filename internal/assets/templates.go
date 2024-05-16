@@ -19,6 +19,7 @@ var (
 	IFrameTemplate                = compileTemplate("iframe.html", "widget-base.html")
 	WeatherTemplate               = compileTemplate("weather.html", "widget-base.html")
 	ForumPostsTemplate            = compileTemplate("forum-posts.html", "widget-base.html")
+	FeedbinPostsTemplate          = compileTemplate("feedbin-posts.html", "widget-base.html")
 	RedditCardsHorizontalTemplate = compileTemplate("reddit-horizontal-cards.html", "widget-base.html")
 	RedditCardsVerticalTemplate   = compileTemplate("reddit-vertical-cards.html", "widget-base.html")
 	ReleasesTemplate              = compileTemplate("releases.html", "widget-base.html")
